@@ -95,7 +95,62 @@ while(i>=1){
   i=i-1;
 }
 
+//pattern 4- rhombus
+cout<<endl<<endl;
+i=1;
+while(i<=n){
+  int j=1;
+  while(j<=n-i){
+    cout<<" ";
+    j=j+1;
+  }
+  j=1;
+  while(j<=n){
+    cout<<"* ";
+    j=j+1;
+  }
+  cout<<endl;
+  i=i+1;
+}
+cout<<endl<<endl;
+//pattern 5 - diamond
+i=1;
+while(i<=n){
+  int j=1;
+  while(j<=n-i){
+    cout<<"  ";
+    j=j+1;
+  }
+  j=1;
+  while(j<=2*i-1){
+    cout<<"* ";
+    j=j+1;
+  }
+  cout<<endl;
+  i=i+1;
+}
+i=1;
+while(i<=n-1){
+  int j=1;
+  while(j<=i){
+    cout<<"  ";
+    j=j+1;
+  }
+  j=1;
+  while(j<=2*n-2*i-1){
+cout<<"* ";
+j=j+1;
+  }
+  cout<<endl;
+  i=i+1;
+}
 
+//pattern 6 - valley
+//pattern 7 - flipped valley
+//pattern 8 - hollow square
+//pattern 9 - hollow rhombus
+//pattern 10 - hollow diamond 
+//pattern 11 - x sign
 }
 
 
