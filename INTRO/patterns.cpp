@@ -146,6 +146,38 @@ j=j+1;
 }
 
 //pattern 6 - valley
+cout<<endl<<endl;
+i=1;
+while(i<=n){
+  int j=1;
+  if(i==n){
+    while(j<=2*n-1){
+      cout<<"* ";
+      j=j+1;
+    }
+  }else{
+    j=1;
+  while(j<=i){
+    cout<<"* ";
+    j=j+1;
+  }
+  j=1;
+  while(j<=2*n-2*i-1){
+    cout<<"  ";
+    j=j+1;
+    
+  }
+  j=1;
+  while(j<=i){
+    cout<<"* ";
+    j=j+1;
+  }
+  }
+  
+  
+  cout<<endl;
+  i=i+1;
+}
 //pattern 7 - flipped valley
 //pattern 8 - hollow square
 //pattern 9 - hollow rhombus
