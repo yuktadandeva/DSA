@@ -259,6 +259,46 @@ while(i<=n){
   i=i+1;
 }
 //pattern 10 - hollow diamond 
+cout<<endl<<endl;
+i=1;
+while(i<=n){
+  int j=1;
+  while(j<=n-i){
+    cout<<"  ";
+    j=j+1;
+  }
+  j=1;
+  while(j<=2*i-1){
+    if(j==1||j==2*i-1){
+    cout<<"* ";
+    }else{
+      cout<<"  ";
+    }
+    j=j+1;
+  }
+  cout<<endl;
+  i=i+1;
+}
+
+i=1;
+while(i<=n-1){
+  int j=1;
+  while(j<=i){
+    cout<<"  ";
+    j=j+1;
+  }
+  j=1;
+  while(j<=2*n-2*i-1){
+    if(j==1|| j==2*n-2*i-1){
+      cout<<"* ";
+    }else{
+      cout<<"  ";
+    }
+    j=j+1;
+  }
+  cout<<endl;
+  i=i+1;
+}
 //pattern 11 - x sign
 }
 
