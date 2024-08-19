@@ -154,7 +154,7 @@ while(i<=n){
     while(j<=2*n-1){
       cout<<"* ";
       j=j+1;
-    }
+    } 
   }else{
     j=1;
   while(j<=i){
