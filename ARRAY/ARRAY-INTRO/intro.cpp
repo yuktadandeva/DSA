@@ -1,5 +1,6 @@
   #include<iostream>
    using namespace std;
+
    int main(){ // int F[5];
     // memset(F,0, sizeof(F));
     // for(int i=0; i< 5; i++){
