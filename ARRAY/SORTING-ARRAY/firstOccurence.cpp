@@ -44,8 +44,6 @@ int binarySearch(int arr[], int n, int t){
     
     while(s <= e){
         int mid = (s+e)/2;
-        // to prevent overflow int m = s + (e - s)/2
-        // why not use s/2 + e/2 int addition doesn't work for odd
         if(arr[mid] == t){
             return mid;
         }else if(t > arr[mid] ){
@@ -59,12 +57,32 @@ int binarySearch(int arr[], int n, int t){
     
 }
 
+int lowerBound(int arr[], int n, int t){
+    int s = 0;
+    int e = n - 1;
+    
+    int ans = -1;
+    while(s <= e){
+        int m = s + (s-e)/2;
+        if(arr[m] == t){
+            ans = m;
+            e = m - 1;
+        }else if(t > arr[m]){
+            s = m + 1;
+        }else{
+            e = m - 1;
+        }
+    }
+    return ans;
+}
+
+
 int main() {
 //   bubble sort 
   
-  int arr[] = {10,40,30,50,20};
+  int arr[] = {10,30,30,30,20};
   int n = sizeof(arr)/sizeof(int);
-  int t = 50;
+  int t = 30;
 //   time: O(n^2)
 //   bubbleSort(arr, n);
 
@@ -73,15 +91,13 @@ int main() {
 //   time: big omega(n^2) best-case
 
 //  insertionSort(arr, n);
-//  time: O(n^2)
-//  time: big omega(n) best - case
+// time: O(n^2)
+// time: big omega(n) best - case
 
-cout<<binarySearch(arr, n, t)<<endl;
+// cout<<binarySearch(arr, n, t)<<endl;
 
-//  time: O(log n)
-//  time :O(log n)  worst- case
-//  time :big omega(1) best - case
-
+//first occurence
+cout<<lowerBound(arr, n, t)<< endl;
   for(int i =0 ;i<=n-1;i++){
       cout<<arr[i]<<" ";
   }
