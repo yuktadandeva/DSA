@@ -9,7 +9,7 @@ int main() {
     cin>>n;
     
     int a[100];
-    cout<<"enter "<< n<< " elements : ";
+    cout<<"enter "<<n<< " elements : ";
     for(int i=0; i<n; i++){
         cin>>a[i];
     }
