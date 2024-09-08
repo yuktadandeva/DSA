@@ -27,12 +27,14 @@ void generateSubarrays(int arr[], int n){
 
 void maximumSubarraySum(int arr[],int n){
     int sum = 0;
+    int end ;
     int maxsofar = INT_MIN;
     for(int i = 0; i< n;i++){
-        for(int j= i;j< n;j++){
+        for(int j= i;j< 2*n;j++){
+
             for(int k = i;k<= j;k++){
                 sum += arr[k];
-            }
+            } 
             maxsofar = max(maxsofar, sum);
         }
         //  if(sum > maxsofar){

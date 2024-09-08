@@ -60,16 +60,43 @@ void maximumSubarraySum(int arr[],int n){
     cout<<endl<<maxsofar;
 }
 
+// kadanes(int arr[], int n){
+//     int x[100];
+//     x[0] = arr[0];
+    
+//     for(int i=1; i<=n-1 ;i++){
+        
+//     }
+// }
+
+void generatePairs(int arr[], int n){
+    
+    for(int i = 0; i< n-1;i++){
+       
+        for(int j= i+1;j<n;j++){
+            
+             cout<<"{"<<arr[i]<<","<<arr[j]<<"}"<<" ";
+            // for(int k = i;k<= j;k++){
+            //     cout<<arr[k]<<" ";
+            // }
+            
+        }
+         cout<<endl;
+    }
+}
+
 int main() {
-    int arr[] = {-2,1,-3,4,-1,2,1,-5,4};
+    int arr[] = {10,20,30,40,50};
     int n = sizeof(arr)/sizeof(int);
     
     // generateSequence(arr, n);
     
     // generateSubarrays(arr, n);
     
-    //time complexity: o(n^2)
-    //space complexity: o(n)
-    maximumSubarraySum(arr, n);
+    // maximumSubarraySum(arr, n);
+    
+    // kadanes(arr, n);
+    
+    generatePairs(arr,n);
     return 0;
 }
