@@ -96,7 +96,7 @@ int main() {
 
 // cout<<binarySearch(arr, n, t)<<endl;
 
-//first occurence
+//first 
 cout<<lowerBound(arr, n, t)<< endl;
   for(int i =0 ;i<=n-1;i++){
       cout<<arr[i]<<" ";
