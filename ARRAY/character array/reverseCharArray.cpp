@@ -55,6 +55,8 @@ int main() {
     // cout<<str3;
     
     reverse(str2);
+    //strrev(str2) only char array no range
+    //reverse(str, str+n) generic and range available
     cout<<str2;
 
     return 0;
