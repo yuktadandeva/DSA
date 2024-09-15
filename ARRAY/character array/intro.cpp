@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 int sizeCharArray(char str2[]){
     int cnt = 0;
@@ -7,11 +8,24 @@ int sizeCharArray(char str2[]){
     }
     return cnt;
 }
+
+void readStr(char str[]){
+ int j = 0;
+ char ch;
+ while(true){
+     ch = cin.get();
+     if(ch=='\n'){
+         break;
+     }
+     str[j] = ch;
+     j++;
+ }
+ str[j] = '\0';
+}
 int main() {
    
     char str[6] = {'a','b','c','d','\0'};
     cout<<str<<endl;
-    
     char str2[] = "hello";
     cout<<sizeof(str2)<<endl;
     
@@ -20,8 +34,15 @@ int main() {
     }
     cout<<endl;
     
-    cout<<sizeCharArray(str2);
+    cout<<strlen(str2)<<endl;
+    cout<<sizeCharArray(str2)<<endl;
     
+    char str3[101];
+    cin>>str3;
+    
+    readStr(str3);
+    cout<<str3;
+
     return 0;
 }
 
