@@ -12,6 +12,10 @@ int main() {
     // int * ptr = f();
     // cout<<*ptr<<endl;
   
+//    int n;
+//  cin>>n;
+//  int* aptr = new int[n]; runtime
+
   int* aptr = new int[4];
   
 for(int i = 0; i<4 ; i++){
