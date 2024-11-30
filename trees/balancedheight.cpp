@@ -71,13 +71,14 @@ int h(TreeNode* root){
 int isBalanced(TreeNode* root){
     if(root == NULL){
         return true;
-    }
+    };
+    
+    bool leftIsBal = isBalanced(root->left) ;
+    bool rightIsBal = isBalanced(root->right);
 
-    int he = abs(h(root->left) - h(root->right));
-    if(he > 1){
-        return false;
-    }
-  return isBalanced(root->left) and isBalanced(root->right);
+    bool he = abs(h(root->left) - h(root->right))<=1?true:false;
+    
+  return leftIsBal and rightIsBal and he;
 }
 
 int main() {
