@@ -48,7 +48,7 @@ void calVerticalDist(TreeNode* root, int d){
     
     distMap[d].push_back(root->val);
     calVerticalDist(root->left,d-1);
-    calVerticalDist(root->left,d+1);
+    calVerticalDist(root->right,d+1);
 }
 
 
