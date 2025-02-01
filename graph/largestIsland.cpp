@@ -4,34 +4,38 @@ using namespace std;
 
 class Solution{
     public:
+    vector<int> dx = {0,0,-1,1};
+    vector<int> dy = {};
     int dfs(int i, int j, vector<vector<int>>& grid, vector<vector<bool>>& vis, int m, int n){
         vis[i][j] == true;
         int cnt = 1;
 
-        int nx = i;
-        int ny = j + 1;
+        // int nx = i;
+        // int ny = j + 1;
 
-        if(nx>=0 and nx<m and ny>=0 and ny<n and grid[nx][ny] == 1 and vis[nx][ny]){
-           cnt += dfs(nx, ny, grid, vis, m, n);
-        }
+        // if(nx>=0 and nx<m and ny>=0 and ny<n and grid[nx][ny] == 1 and vis[nx][ny]){
+        //    cnt += dfs(nx, ny, grid, vis, m, n);
+        // }
 
-        nx = i;
-        ny = j - 1;
-        if(nx>=0 and nx<m and ny>=0 and ny<n and grid[nx][ny] == 1 and vis[nx][ny]){
-           cnt += dfs(nx, ny, grid, vis, m, n);
-        }
+        // nx = i;
+        // ny = j - 1;
+        // if(nx>=0 and nx<m and ny>=0 and ny<n and grid[nx][ny] == 1 and vis[nx][ny]){
+        //    cnt += dfs(nx, ny, grid, vis, m, n);
+        // }
 
-        nx = i + 1;
-        ny = j;
-        if(nx>=0 and nx<m and ny>=0 and ny<n and grid[nx][ny] == 1 and vis[nx][ny]){
-           cnt += dfs(nx, ny, grid, vis, m, n);
-        }
+        // nx = i + 1;
+        // ny = j;
+        // if(nx>=0 and nx<m and ny>=0 and ny<n and grid[nx][ny] == 1 and vis[nx][ny]){
+        //    cnt += dfs(nx, ny, grid, vis, m, n);
+        // }
 
-        nx = i - 1;
-        ny = j;
-        if(nx>=0 and nx<m and ny>=0 and ny<n and grid[nx][ny] == 1 and vis[nx][ny]){
-           cnt += dfs(nx, ny, grid, vis, m, n);
-        }
+        // nx = i - 1;
+        // ny = j;
+        // if(nx>=0 and nx<m and ny>=0 and ny<n and grid[nx][ny] == 1 and vis[nx][ny]){
+        //    cnt += dfs(nx, ny, grid, vis, m, n);
+        // }
+
+       
 
         return cnt;
     }
